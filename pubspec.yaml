@@ -55,6 +55,10 @@ flutter:
   - images/aboutconcord.jpg
   - images/aboutwhitecement.jpg
   - images/jordaninwhitecement3.jpg
+  - images/jordan1offwhite.jpg
+  - images/jordanoffwhitedetail.jpg
+  - images/virgiljordan1offwhite.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

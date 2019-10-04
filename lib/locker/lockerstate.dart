@@ -10,7 +10,7 @@ class LockerState {
         Sneaker(
           "images/whitecement3.jpg",
           "images/whitecementdetail.jpg",
-          "images/aboutwhitecement.jpg",
+          "images/whitecement3.jpg",
           "White Cement 3",
           AppStrings.whiteCement3Des,
           "images/jordaninwhitecement3.jpg",
@@ -32,6 +32,14 @@ class LockerState {
             "Concord 11",
             AppStrings.concord11Des,
             "images/jordaninconcord.jpg",
+            false),
+        Sneaker(
+            "images/jordan1offwhite.jpg",
+            "images/jordanoffwhitedetail.jpg",
+            "images/jordan1offwhite.jpg",
+            "Jordan 1 Off--White",
+            AppStrings.jordan1OffwhiteDes,
+            "images/virgiljordan1offwhite.jpg",
             false)
       ]));
 
