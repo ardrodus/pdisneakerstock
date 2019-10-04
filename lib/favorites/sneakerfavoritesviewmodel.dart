@@ -11,7 +11,7 @@ class SneakerFavoritesViewModel {
   static SneakerFavoritesViewModel fromStore(Store<AppState> store){
     return SneakerFavoritesViewModel(
       pageTitle: "Favorites",
-      sneakers: store.state.favSneakerState.favSneakers
+      sneakers: store.state.lockerState.sneakers.where((snk) => snk.isFav == true).toList()
     );
   }
 }
