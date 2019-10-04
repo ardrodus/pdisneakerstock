@@ -4,7 +4,11 @@ import 'package:sneaker_stk/locker/lockerstate.dart';
 class AppState {
   final LockerState lockerState;
   AppState({
-    @required this.lockerState
+    @required this.lockerState,
     });
-  factory AppState.initial() => AppState(lockerState: LockerState.initial());
+
+
+  factory AppState.initial() => AppState(
+    lockerState: LockerState.initial()
+    );
 }

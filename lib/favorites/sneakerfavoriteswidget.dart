@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sneaker_stk/appstate/appstate.dart';
-import 'package:sneaker_stk/favorites/sneakerfavoriteswidget.dart';
+import 'package:sneaker_stk/favorites/sneakerfavoritesviewmodel.dart';
 
 import 'package:sneaker_stk/locker/sneaker/sneakerwidget.dart';
 import 'package:redux/redux.dart';
-import 'sneakerlockerviewmodel.dart';
 
-class SneakerLockerWidget extends StatefulWidget {
+class SneakerFavoritesWidget extends StatefulWidget {
   @override
-  createState() => _SneakerLockerState();
+  createState() => _SneakerFavoritesState();
 }
 
-class _SneakerLockerState extends State<SneakerLockerWidget> {
+class _SneakerFavoritesState extends State<SneakerFavoritesWidget> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   @override
   Widget build(BuildContext context) =>
-      StoreConnector<AppState, SneakerLockerViewModel>(
+      StoreConnector<AppState, SneakerFavoritesViewModel>(
         converter: (Store<AppState> store) =>
-            SneakerLockerViewModel.fromStore(store),
-        builder: (BuildContext context, SneakerLockerViewModel viewModel) =>
+            SneakerFavoritesViewModel.fromStore(store),
+        builder: (BuildContext context, SneakerFavoritesViewModel viewModel) =>
             Scaffold(
           body: ListView.builder(
               itemCount: viewModel.sneakers.length * 2,
@@ -32,7 +31,7 @@ class _SneakerLockerState extends State<SneakerLockerWidget> {
         ),
       );
 
-  Widget _buildRow(int i, SneakerLockerViewModel viewModel) {
+  Widget _buildRow(int i, SneakerFavoritesViewModel viewModel) {
     return Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListTile(
